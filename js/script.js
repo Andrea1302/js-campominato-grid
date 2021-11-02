@@ -31,27 +31,57 @@ const sceltaDifficolta = parseInt(prompt("inserisci il livello di difficoltà ( 
 
 // difficoltà 1 
 if ( sceltaDifficolta === 1 ) {
-    for ( let i = 0; i < 100; i++) {
-        var squareElement = document.createElement("div");
-        squareElement.classList.add("square_easy")
-        containerSquare.append(squareElement);
-    }
+    creazioneGrigliaEasy();
+    
 }
 
 // difficoltà 2
 if ( sceltaDifficolta === 2 ) {
-    for ( let i = 0; i < 81; i++) {
-        var squareElement = document.createElement("div");
-        squareElement.classList.add("square_medium")
-        containerSquare.append(squareElement);
-    }
+    creazioneGrigliaMedium();
+   
 }
 
 // difficoltà 3 
 if ( sceltaDifficolta === 3 ) {
+    creazioneElementoExtreme();
+    
+}
+
+
+
+
+
+
+
+// funzioni utili
+function creazioneGrigliaEasy(){
+    
+    for ( let i = 0; i < 100; i++) {
+        let squareElement = document.createElement("div");
+        squareElement.classList.add("square_easy")
+        containerSquare.append(squareElement);
+        return squareElement;
+    }
+}
+
+function creazioneGrigliaMedium(){
+    
+    for ( let i = 0; i < 81; i++) {
+        let squareElement = document.createElement("div");
+        squareElement.classList.add("square_medium")
+        containerSquare.append(squareElement);
+        return squareElement;
+
+    }
+}
+
+
+function creazioneGrigliaExtreme(){
+    
     for ( let i = 0; i < 49; i++) {
-        var squareElement = document.createElement("div");
+        let squareElement = document.createElement("div");
         squareElement.classList.add("square_extreme")
         containerSquare.append(squareElement);
+        return squareElement;
     }
 }
