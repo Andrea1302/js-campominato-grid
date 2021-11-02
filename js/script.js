@@ -85,39 +85,3 @@ if ( sceltaDifficolta === 3 ) {
     
 }
 
-
-
-
-
-
-
-// // funzioni utili
-// function creazioneGrigliaEasy(){
-    
-//     for ( let i = 0; i < 100; i++) {
-//         let squareElement = document.createElement("div");
-//         return squareElement;
-//     }
-// }
-
-// function creazioneGrigliaMedium(){
-    
-//     for ( let i = 0; i < 81; i++) {
-//         let squareElement = document.createElement("div");
-//         squareElement.classList.add("square_medium")
-//         containerSquare.append(squareElement);
-//         return squareElement;
-
-//     }
-// }
-
-
-// function creazioneGrigliaExtreme(){
-    
-//     for ( let i = 0; i < 49; i++) {
-//         let squareElement = document.createElement("div");
-//         squareElement.classList.add("square_extreme")
-//         containerSquare.append(squareElement);
-//         return squareElement;
-//     }
-// }
