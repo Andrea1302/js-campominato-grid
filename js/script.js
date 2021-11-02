@@ -24,64 +24,44 @@ const containerSquare = document.getElementById("container_square");
 
 
 // 1.
-const sceltaDifficolta = parseInt(prompt("inserisci il livello di difficoltà ( '1' = Facile), ( '2' = Medio), ( '3' = Difficile)")) ;
+let sceltaDifficolta = parseInt(prompt("inserisci il livello di difficoltà ( '1' = Facile), ( '2' = Medio), ( '3' = Difficile)")) ;
+while (sceltaDifficolta !== 1 && sceltaDifficolta !== 2 && sceltaDifficolta !== 3 ){
+    // sceltaDifficolta = parseInt(prompt("inserisci il livello di difficoltà ( '1' = Facile), ( '2' = Medio), ( '3' = Difficile)")) ;
+    alert("Scegli 1, 2 o 3");
+    sceltaDifficolta = parseInt(prompt("inserisci il livello di difficoltà ( '1' = Facile), ( '2' = Medio), ( '3' = Difficile)")) ;
+}
 
 // 2.
 // 2.1
 
 // difficoltà 1 
 if ( sceltaDifficolta === 1 ) {
-    for ( let i = 1; i <= 100; i++) {
-        squareElement = document.createElement("div");
-        squareElement.classList.add("square_easy")
-        containerSquare.append(squareElement);
-        // 3
-        squareElement.addEventListener("click",
-            function(){
-                this.classList.add("active");
-                this.innerHTML += i;
-            }   
-    
-        )
-    }
-
-    
+    numeroBlocchi = 100;
+    baseClass = "square_easy";  
 }
 
 // difficoltà 2
 if ( sceltaDifficolta === 2 ) {
-    for ( let i = 1; i <= 81; i++) {
-        squareElement = document.createElement("div");
-        squareElement.classList.add("square_medium")
-        containerSquare.append(squareElement);
-        // 3
-        squareElement.addEventListener("click",
-            function(){
-                this.classList.add("active");
-                this.innerHTML += i;
-            }   
-    
-        )
-    }
+    numeroBlocchi = 81;
+    baseClass = "square_medium";
 }
 
 // difficoltà 3 
 if ( sceltaDifficolta === 3 ) {
-
-    for ( let i = 1; i <= 49; i++) {
-        squareElement = document.createElement("div");
-        squareElement.classList.add("square_extreme")
-        containerSquare.append(squareElement);
-        // 3
-        squareElement.addEventListener("click",
-            function(){
-                this.classList.add("active");
-                this.innerHTML += i;
-            }   
-    
-        )
-    }
-    
-    
+    numeroBlocchi = 49;
+    baseClass = "square_extreme";    
 }
 
+for ( let i = 1; i <= numeroBlocchi; i++) {
+    squareElement = document.createElement("div");
+    squareElement.classList.add(baseClass)
+    containerSquare.append(squareElement);
+    // 3
+    squareElement.addEventListener("click",
+        function(){
+            this.classList.add("active");
+            this.innerHTML += i;
+        }   
+
+    )
+}
