@@ -35,6 +35,7 @@ if ( sceltaDifficolta === 1 ) {
         squareElement = document.createElement("div");
         squareElement.classList.add("square_easy")
         containerSquare.append(squareElement);
+        // 3
         squareElement.addEventListener("click",
             function(){
                 this.classList.add("active");
@@ -53,6 +54,7 @@ if ( sceltaDifficolta === 2 ) {
         squareElement = document.createElement("div");
         squareElement.classList.add("square_medium")
         containerSquare.append(squareElement);
+        // 3
         squareElement.addEventListener("click",
             function(){
                 this.classList.add("active");
@@ -70,6 +72,7 @@ if ( sceltaDifficolta === 3 ) {
         squareElement = document.createElement("div");
         squareElement.classList.add("square_extreme")
         containerSquare.append(squareElement);
+        // 3
         squareElement.addEventListener("click",
             function(){
                 this.classList.add("active");
