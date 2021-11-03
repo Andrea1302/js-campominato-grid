@@ -13,14 +13,37 @@ body{
     display: flex;
     justify-content: center;
 }
-
 h1{
     text-align: center;
     font-size: 50px;
     color: white;
     margin-top: 20px;
 }
-
+h4{
+    text-align: center;
+    color: white;
+}
+#scelta_difficolta{
+    display: flex;
+    justify-content: space-evenly;
+}
+#scelta_difficolta .bottoni{
+    margin: 20px 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 8px 24px 1px black;
+    font-weight: bold;
+}
+.bottoni#easy{
+    background-color: lightgreen;
+}
+.bottoni#medium{
+    background-color: lightgreen
+}
+.bottoni#hard{
+    background-color: lightgreen
+}
 /* Regole container_square */
 #container_square{
     width: 500px;
@@ -53,6 +76,9 @@ h1{
 
 
 /* al click  */
+.active_botton{
+    border: 5px solid white;
+}
 .active{
     background-color: cyan;
 }

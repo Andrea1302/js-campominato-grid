@@ -20,6 +20,9 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro (
 
 // Variabili globali 
 const containerSquare = document.getElementById("container_square");
+const bottonEasy = document.getElementById("easy");
+const bottonMedium = document.getElementById("medium");
+const bottonHard = document.getElementById("hard");
 
 
 
@@ -36,32 +39,38 @@ while (sceltaDifficolta !== 1 && sceltaDifficolta !== 2 && sceltaDifficolta !== 
 
 // difficoltà 1 
 if ( sceltaDifficolta === 1 ) {
-    numeroBlocchi = 100;
-    baseClass = "square_easy";  
+    // numeroBlocchi = 100;
+    // baseClass = "square_easy";  
+    generateGrid(100,"square_easy") 
+
 }
 
 // difficoltà 2
 if ( sceltaDifficolta === 2 ) {
-    numeroBlocchi = 81;
-    baseClass = "square_medium";
+    // numeroBlocchi = 81;
+    // baseClass = "square_medium";
+    generateGrid(81,"square_medium") 
+
 }
 
 // difficoltà 3 
 if ( sceltaDifficolta === 3 ) {
-    numeroBlocchi = 49;
-    baseClass = "square_extreme";    
+    // numeroBlocchi = 49;
+    // baseClass = "square_extreme";   
+    generateGrid(49,"square_extreme") 
 }
-
-for ( let i = 1; i <= numeroBlocchi; i++) {
-    squareElement = document.createElement("div");
-    squareElement.classList.add(baseClass)
-    containerSquare.append(squareElement);
-    // 3
-    squareElement.addEventListener("click",
-        function(){
-            this.classList.add("active");
-            this.innerHTML += i;
-        }   
-
-    )
+function generateGrid(numeroBlocchi,baseClass){
+    for ( let i = 1; i <= numeroBlocchi; i++) {
+        squareElement = document.createElement("div");
+        squareElement.classList.add(baseClass)
+        containerSquare.append(squareElement);
+        // 3
+        squareElement.addEventListener("click",
+            function(){
+                this.classList.add("active");
+                this.innerHTML = i;
+            }   
+    
+        )
+    }
 }
